@@ -5,16 +5,16 @@
 .idea/
 
 # Minecraft server
-src/cache/
-src/logs/
-src/world/
-src/world_nether/
-src/world_the_end/
-src/world_staff/
+cache/
+logs/
+world/
+world_nether/
+world_the_end/
+world_staff/
 
-src/.console_history
-src/banned-ips.json
-src/banned-players.json
-src/usercache.json
-src/version_history.json
-src/whitelist.json
+.console_history
+banned-ips.json
+banned-players.json
+usercache.json
+version_history.json
+whitelist.json
