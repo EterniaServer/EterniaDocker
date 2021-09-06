@@ -190,22 +190,14 @@ world-settings:
     generator-settings:
       flat-bedrock: false
     entity-per-chunk-save-limit:
+      small_fireball: -4
       experience_orb: 128
       arrow: 4
-      dragonfireball: 4
       egg: 4
       ender_pearl: 4
       fireball: 4
-      firework: 4
-      largefireball: 4
-      lingeringpotion: 4
-      llamaspit: 4
-      shulkerbullet: 4
-      sizedfireball: 4
       snowball: 4
-      spectralarrow: 4
-      splashpotion: 4
-      thrownexpbottle: 4
+      spectral_arrow: 4
       trident: 4
     game-mechanics:
       scan-for-legacy-ender-dragon: true
@@ -352,24 +344,24 @@ world-settings:
       lava-obscures: false
       use-permission: false
       hidden-blocks:
-        - air
-        - coal_ore
-        - diamond_ore
-        - emerald_ore
-        - gold_ore
-        - iron_ore
-        - lapis_ore
-        - mossy_cobblestone
-        - redstone_ore
+      - air
+      - coal_ore
+      - diamond_ore
+      - emerald_ore
+      - gold_ore
+      - iron_ore
+      - lapis_ore
+      - mossy_cobblestone
+      - redstone_ore
       replacement-blocks:
-        - chest
-        - andesite
-        - diorite
-        - dirt
-        - granite
-        - gravel
-        - oak_planks
-        - stone
+      - chest
+      - andesite
+      - diorite
+      - dirt
+      - granite
+      - gravel
+      - oak_planks
+      - stone
     viewdistances:
       no-tick-view-distance: 10
   world_nether:
@@ -388,22 +380,22 @@ world-settings:
       lava-obscures: false
       use-permission: false
       hidden-blocks:
-        - air
-        - ancient_debris
-        - bone_block
-        - glowstone
-        - magma_block
-        - nether_bricks
-        - nether_gold_ore
-        - nether_quartz_ore
-        - polished_blackstone_bricks
+      - air
+      - ancient_debris
+      - bone_block
+      - glowstone
+      - magma_block
+      - nether_bricks
+      - nether_gold_ore
+      - nether_quartz_ore
+      - polished_blackstone_bricks
       replacement-blocks:
-        - basalt
-        - blackstone
-        - gravel
-        - netherrack
-        - soul_sand
-        - soul_soil
+      - basalt
+      - blackstone
+      - gravel
+      - netherrack
+      - soul_sand
+      - soul_soil
   world_the_end:
     spawn-limits:
       water-ambient: 0
