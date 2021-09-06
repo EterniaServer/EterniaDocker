@@ -14,14 +14,14 @@ verbose: false
 config-version: 22
 settings:
   use-display-name-in-quit-message: false
-  load-permissions-yml-before-plugins: true
+  load-permissions-yml-before-plugins: false
   region-file-cache-size: 256
-  enable-player-collisions: true
+  enable-player-collisions: false
   save-empty-scoreboard-teams: false
-  bungee-online-mode: true
+  bungee-online-mode: false
   incoming-packet-spam-threshold: 300
-  use-alternative-luck-formula: false
-  console-has-all-permissions: false
+  use-alternative-luck-formula: true
+  console-has-all-permissions: true
   player-auto-save-rate: -1
   max-player-auto-save-per-tick: -1
   max-joins-per-tick: 3
@@ -83,23 +83,23 @@ settings:
     player-max-concurrent-loads: 4.0
     global-max-concurrent-loads: 500.0
   packet-limiter:
-    kick-message: '&cSent too many packets'
+    kick-message: '&8[&aE&9S&8]&7 Kickado por enviar muitos pacotes&8.'
     limits:
       all:
         interval: 7.0
-        max-packet-rate: 500.0
+        max-packet-rate: 384.0
       PacketPlayInAutoRecipe:
         interval: 4.0
         max-packet-rate: 5.0
         action: DROP
 messages:
-  no-permission: '&cI''m sorry, but you do not have permission to perform this command.
-    Please contact the server administrators if you believe that this is in error.'
+  no-permission: '&8[&aE&9S&8] &7Você não tem permissão para isso&8.'
   kick:
     authentication-servers-down: ''
-    connection-throttle: Connection throttled! Please wait before reconnecting.
-    flying-player: Flying is not enabled on this server
-    flying-vehicle: Flying is not enabled on this server
+    connection-throttle: '&8[&aE&9S&8] &7Erro de conexão&8, &7espere um momento antes
+      de tentar logar&8.'
+    flying-player: '&8[&aE&9S&8] &7Voar não é permitido nesse servidor&8.'
+    flying-vehicle: '&8[&aE&9S&8] &7Voar não é permitido nesse servidor&8.'
 timings:
   enabled: true
   verbose: true
@@ -114,94 +114,105 @@ timings:
   - server-ip
   history-interval: 300
   history-length: 3600
-  server-name: Unknown Server
+  server-name: EterniaServer
 world-settings:
   default:
     piglins-guard-chests: true
     should-remove-dragon: false
-    max-auto-save-chunks-per-tick: 24
+    max-auto-save-chunks-per-tick: 8
     baby-zombie-movement-modifier: 0.5
-    optimize-explosions: false
+    optimize-explosions: true
     fixed-chunk-inhabited-time: -1
     use-vanilla-world-scoreboard-name-coloring: false
-    remove-corrupt-tile-entities: false
+    remove-corrupt-tile-entities: true
     experience-merge-max-value: -1
-    prevent-moving-into-unloaded-chunks: false
+    prevent-moving-into-unloaded-chunks: true
     count-all-mobs-for-spawning: false
     ender-dragons-death-always-places-dragon-egg: false
     allow-using-signs-inside-spawn-protection: false
     falling-block-height-nerf: 0
     tnt-entity-height-nerf: 0
     filter-nbt-data-from-spawn-eggs-and-related: true
-    max-entity-collisions: 8
+    max-entity-collisions: 1
     disable-creeper-lingering-effect: false
     duplicate-uuid-resolver: saferegen
     duplicate-uuid-saferegen-delete-range: 32
     phantoms-do-not-spawn-on-creative-players: true
     phantoms-only-attack-insomniacs: true
-    update-pathfinding-on-block-update: true
+    update-pathfinding-on-block-update: false
     fix-wither-targeting-bug: false
     map-item-frame-cursor-update-interval: 10
     allow-player-cramming-damage: false
     all-chunks-are-slime-chunks: false
     entities-target-with-follow-range: false
-    spawner-nerfed-mobs-should-jump: false
-    armor-stands-tick: true
+    spawner-nerfed-mobs-should-jump: true
+    armor-stands-tick: false
     seed-based-feature-search: true
-    seed-based-feature-search-loads-chunks: true
+    seed-based-feature-search-loads-chunks: false
     water-over-lava-flow-speed: 5
-    grass-spread-tick-rate: 1
-    use-faster-eigencraft-redstone: false
+    grass-spread-tick-rate: 12
+    use-faster-eigencraft-redstone: true
     fix-items-merging-through-walls: false
-    keep-spawn-loaded: true
+    keep-spawn-loaded: false
     disable-thunder: false
     skeleton-horse-thunder-spawn-chance: 0.01
     disable-ice-and-snow: false
-    parrots-are-unaffected-by-player-movement: false
+    parrots-are-unaffected-by-player-movement: true
     nether-ceiling-void-damage-height: 0
-    only-players-collide: false
+    only-players-collide: true
     allow-vehicle-collisions: true
     allow-non-player-entities-on-scoreboards: false
     portal-search-radius: 128
     portal-create-radius: 16
     portal-search-vanilla-dimension-scaling: true
-    keep-spawn-loaded-range: 10
-    armor-stands-do-collision-entity-lookups: true
+    keep-spawn-loaded-range: 3
+    armor-stands-do-collision-entity-lookups: false
     disable-explosion-knockback: false
     fix-climbing-bypassing-cramming-rule: false
-    container-update-tick-rate: 1
+    container-update-tick-rate: 2
     disable-teleportation-suffocation-check: false
     prevent-tnt-from-moving-in-water: false
     enable-treasure-maps: true
-    treasure-maps-return-already-discovered: false
-    mob-spawner-tick-rate: 1
+    treasure-maps-return-already-discovered: true
+    mob-spawner-tick-rate: 16
     show-sign-click-command-failure-msgs-to-player: false
-    iron-golems-can-spawn-in-air: false
-    max-leash-distance: 10.0
+    iron-golems-can-spawn-in-air: true
+    max-leash-distance: 16.0
     per-player-mob-spawns: true
     map-item-frame-cursor-limit: 128
     light-queue-size: 20
     zombies-target-turtle-eggs: true
     zombie-villager-infection-chance: -1.0
-    non-player-arrow-despawn-rate: -1
-    creative-arrow-despawn-rate: -1
+    non-player-arrow-despawn-rate: 60
+    creative-arrow-despawn-rate: 60
     auto-save-interval: -1
-    delay-chunk-unloads-by: 10s
+    delay-chunk-unloads-by: 4s
     generator-settings:
       flat-bedrock: false
     entity-per-chunk-save-limit:
-      experience_orb: -1
-      snowball: -1
-      ender_pearl: -1
-      arrow: -1
-      fireball: -1
-      small_fireball: -1
+      experience_orb: 128
+      arrow: 4
+      dragonfireball: 4
+      egg: 4
+      ender_pearl: 4
+      fireball: 4
+      firework: 4
+      largefireball: 4
+      lingeringpotion: 4
+      llamaspit: 4
+      shulkerbullet: 4
+      sizedfireball: 4
+      snowball: 4
+      spectralarrow: 4
+      splashpotion: 4
+      thrownexpbottle: 4
+      trident: 4
     game-mechanics:
       scan-for-legacy-ender-dragon: true
       fix-curing-zombie-villager-discount-exploit: true
       disable-pillager-patrols: false
-      disable-chest-cat-detection: false
-      nerf-pigmen-from-nether-portals: false
+      disable-chest-cat-detection: true
+      nerf-pigmen-from-nether-portals: true
       shield-blocking-delay: 5
       disable-player-crits: false
       disable-sprint-interruption-on-attack: false
@@ -210,7 +221,7 @@ world-settings:
       disable-relative-projectile-velocity: false
       disable-mob-spawner-spawn-egg-transformation: false
       pillager-patrols:
-        spawn-chance: 0.2
+        spawn-chance: 0.1
         spawn-delay:
           per-player: false
           ticks: 12000
@@ -239,8 +250,8 @@ world-settings:
       MinimumTicks: 100
       MaximumTicks: 600
     despawn-ranges:
-      soft: 32
-      hard: 128
+      soft: 16
+      hard: 64
     frosted-ice:
       enabled: true
       delay:
@@ -322,4 +333,90 @@ world-settings:
       - oak_planks
       - deepslate
     viewdistances:
-      no-tick-view-distance: -1
+      no-tick-view-distance: 6
+  world:
+    spawn-limits:
+      water-ambient: 2
+      monsters: 16
+      animals: 2
+      water-animals: 2
+      ambient: 1
+    keep-spawn-loaded-range: 3
+    keep-spawn-loaded: true
+    anti-xray:
+      enabled: true
+      engine-mode: 2
+      chunk-edge-mode: 2
+      max-chunk-section-index: 3
+      update-radius: 2
+      lava-obscures: false
+      use-permission: false
+      hidden-blocks:
+        - air
+        - coal_ore
+        - diamond_ore
+        - emerald_ore
+        - gold_ore
+        - iron_ore
+        - lapis_ore
+        - mossy_cobblestone
+        - redstone_ore
+      replacement-blocks:
+        - chest
+        - andesite
+        - diorite
+        - dirt
+        - granite
+        - gravel
+        - oak_planks
+        - stone
+    viewdistances:
+      no-tick-view-distance: 10
+  world_nether:
+    spawn-limits:
+      water-ambient: 0
+      monsters: 16
+      animals: 1
+      water-animals: 0
+      ambient: 1
+    anti-xray:
+      enabled: true
+      engine-mode: 2
+      chunk-edge-mode: 2
+      max-chunk-section-index: 6
+      update-radius: 2
+      lava-obscures: false
+      use-permission: false
+      hidden-blocks:
+        - air
+        - ancient_debris
+        - bone_block
+        - glowstone
+        - magma_block
+        - nether_bricks
+        - nether_gold_ore
+        - nether_quartz_ore
+        - polished_blackstone_bricks
+      replacement-blocks:
+        - basalt
+        - blackstone
+        - gravel
+        - netherrack
+        - soul_sand
+        - soul_soil
+  world_the_end:
+    spawn-limits:
+      water-ambient: 0
+      monsters: 12
+      animals: 0
+      water-animals: 0
+      ambient: 1
+    viewdistances:
+      no-tick-view-distance: 8
+  world_staff:
+    spawn-limits:
+      water-ambient: 0
+      monsters: 0
+      animals: 0
+      water-animals: 0
+      ambient: 0
