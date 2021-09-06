@@ -1,0 +1,41 @@
+version: "3.8"
+
+x-app: &default-app
+    image: "api"
+    build:
+        context: .
+        dockerfile: ./docker/java/Dockerfile
+    restart: "unless-stopped"
+    stop_grace_period: "5s"
+    volumes:
+        - ./src:/usr/src/app
+    depends_on:
+        - db
+    networks:
+        - api-network
+        - api-proxy-network
+    env_file:
+        - ./config/.env
+
+services:
+    minecraft:
+        <<: *default-app
+        container_name: eterniaserver-container
+        ports:
+            - "25565:25565"
+        environment:
+            COMMAND: development
+    db:
+        image: mariadb
+        container_name: eterniaserver-mariadb-container
+        ports:
+            - "3305:3305"
+        networks:
+            - api-network
+        env_file:
+            - ./config/.env
+
+networks:
+    api-proxy-network:
+
+    api-network:

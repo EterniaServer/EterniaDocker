@@ -1,0 +1,20 @@
+# Configurações
+.env
+
+# IDE
+.idea/
+
+# Minecraft server
+src/cache/
+src/logs/
+src/world/
+src/world_nether/
+src/world_the_end/
+src/world_staff/
+
+src/.console_history
+src/banned-ips.json
+src/banned-players.json
+src/usercache.json
+src/version_history.json
+src/whitelist.json
